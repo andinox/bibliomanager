@@ -1,4 +1,0 @@
-bash, version 0.0.1
-Ces commandes de shell sont définie de maniere interne.
-Saisisez « help » pour voir cette listes.
-Taper « help nom » pour en savoir plus.

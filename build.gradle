@@ -1,0 +1,26 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'java'
+}
+
+group 'fr.andinox'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.diogonunes:JColor:5.5.1'
+}
+
+jar{
+    manifest{
+        attributes 'Main-Class': 'fr.andinox.bibliomanager.App'
+    }
+    from{
+        configurations.compile.collect{
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
